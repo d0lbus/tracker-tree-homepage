@@ -1,26 +1,85 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --tt-hero: #06130e;
+  --tt-hero-deep: #04100b;
+  --tt-dark-card: #0e1e16;
+  --tt-green: #2f8f5b;
+  --tt-green-hover: #3bae70;
+  --tt-final-green: #0e3030;
+  --tt-light: #f7f9f4;
+  --tt-card: #ffffff;
+  --tt-text: #17211b;
+  --tt-muted: #647067;
+  --tt-border: #e0e7dd;
+  --tt-pale-green: #eaf7ee;
+  --tt-pale-yellow: #fff6d8;
+  --tt-pale-blue: #eaf3ff;
+  --tt-pale-cream: #f8f1e5;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+* {
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--tt-light);
+  color: var(--tt-text);
+}
+
+a {
+  text-decoration: none;
+}
+
+::selection {
+  background: rgba(47, 143, 91, 0.2);
+}
+
+.tt-container {
+  width: 100%;
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .tt-container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .tt-container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+.tt-hero-bg {
+  background:
+    radial-gradient(circle at 50% 0%, rgba(59, 174, 112, 0.24), transparent 30%),
+    radial-gradient(circle at 85% 30%, rgba(234, 247, 238, 0.08), transparent 28%),
+    linear-gradient(180deg, var(--tt-hero), var(--tt-hero-deep));
+}
+
+.tt-grid-overlay {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.tt-card-shadow {
+  box-shadow: 0 24px 80px rgba(6, 19, 14, 0.12);
+}
+
+.tt-soft-shadow {
+  box-shadow: 0 16px 40px rgba(23, 33, 27, 0.08);
 }
