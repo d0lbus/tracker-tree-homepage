@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+Ôªøimport type { Metadata } from "next";
 import { LegalPageShell } from "@/components/landing/LegalPageShell";
 import { siteConfig } from "@/lib/site";
 
@@ -128,7 +128,7 @@ export default function PrivacyPage() {
           ),
         },
         {
-          title: "Childrenís privacy",
+          title: "Children‚Äôs privacy",
           body: (
             <p>
               TrackerTree is not intended for children under 13. We do not
@@ -141,7 +141,7 @@ export default function PrivacyPage() {
           body: (
             <p>
               We may update this Privacy Policy from time to time. When we make
-              changes, we will update the ìLast updatedî date on this page.
+              changes, we will update the ‚ÄúLast updated‚Äù date on this page.
             </p>
           ),
         },
@@ -164,3 +164,4 @@ export default function PrivacyPage() {
     />
   );
 }
+

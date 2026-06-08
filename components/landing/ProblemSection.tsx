@@ -1,4 +1,4 @@
-import { CircleDollarSign, Focus, ListTodo, Repeat2 } from "lucide-react";
+﻿import { CircleDollarSign, Focus, ListTodo, Repeat2 } from "lucide-react";
 
 const problems = [
   {
@@ -62,3 +62,4 @@ export function ProblemSection() {
     </section>
   );
 }
+

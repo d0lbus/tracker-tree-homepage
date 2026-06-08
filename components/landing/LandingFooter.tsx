@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import { Leaf } from "lucide-react";
 import { siteConfig } from "@/lib/site";
 
@@ -28,6 +28,29 @@ const footerColumns = [
   },
 ];
 
+function isInternalLink(href: string) {
+  return href.startsWith("/") || href.startsWith("#");
+}
+
+function FooterLink({ href, label }: { href: string; label: string }) {
+  const className =
+    "text-sm text-[var(--tt-muted)] transition hover:text-[var(--tt-text)]";
+
+  if (isInternalLink(href)) {
+    return (
+      <Link href={href} className={className}>
+        {label}
+      </Link>
+    );
+  }
+
+  return (
+    <a href={href} className={className}>
+      {label}
+    </a>
+  );
+}
+
 export function LandingFooter() {
   return (
     <footer className="border-t border-[var(--tt-border)] bg-white">
@@ -52,23 +75,11 @@ export function LandingFooter() {
                 <h3 className="text-sm font-semibold">{column.title}</h3>
                 <div className="mt-4 flex flex-col gap-3">
                   {column.links.map((link) => (
-                    link.href.startsWith("/") ? (
-                      <Link
-                        key={link.label}
-                        href={link.href}
-                        className="text-sm text-[var(--tt-muted)] transition hover:text-[var(--tt-text)]"
-                      >
-                        {link.label}
-                      </Link>
-                    ) : (
-                      <a
-                        key={link.label}
-                        href={link.href}
-                        className="text-sm text-[var(--tt-muted)] transition hover:text-[var(--tt-text)]"
-                      >
-                        {link.label}
-                      </a>
-                    )
+                    <FooterLink
+                      key={link.label}
+                      href={link.href}
+                      label={link.label}
+                    />
                   ))}
                 </div>
               </div>
@@ -77,10 +88,11 @@ export function LandingFooter() {
         </div>
 
         <div className="mt-10 flex flex-col gap-3 border-t border-[var(--tt-border)] pt-6 text-sm text-[var(--tt-muted)] sm:flex-row sm:items-center sm:justify-between">
-          <p>� 2026 TrackerTree. All rights reserved.</p>
+          <p>© 2026 TrackerTree. All rights reserved.</p>
           <p>Built for personal progress, not corporate project management.</p>
         </div>
       </div>
     </footer>
   );
 }
+

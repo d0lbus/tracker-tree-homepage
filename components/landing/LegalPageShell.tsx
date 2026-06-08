@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+﻿import type { ReactNode } from "react";
 import { LandingFooter } from "./LandingFooter";
 import { LandingNavbar } from "./LandingNavbar";
 
@@ -61,3 +61,4 @@ export function LegalPageShell({
     </>
   );
 }
+

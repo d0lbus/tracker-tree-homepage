@@ -1,6 +1,11 @@
+﻿import Link from "next/link";
 import type { AnchorHTMLAttributes, ReactNode } from "react";
 
-type LandingButtonProps = AnchorHTMLAttributes<HTMLAnchorElement> & {
+type LandingButtonProps = Omit<
+  AnchorHTMLAttributes<HTMLAnchorElement>,
+  "href"
+> & {
+  href: string;
   children: ReactNode;
   variant?: "primary" | "secondary" | "dark" | "light";
 };
@@ -16,18 +21,31 @@ const variants = {
     "bg-white text-[var(--tt-final-green)] hover:bg-white/90 border border-transparent",
 };
 
+function isInternalLink(href: string) {
+  return href.startsWith("/") || href.startsWith("#");
+}
+
 export function LandingButton({
   children,
+  href,
   variant = "primary",
   className = "",
   ...props
 }: LandingButtonProps) {
+  const buttonClassName = `inline-flex min-h-11 items-center justify-center rounded-lg px-5 py-3 text-sm font-semibold transition ${variants[variant]} ${className}`;
+
+  if (isInternalLink(href)) {
+    return (
+      <Link href={href} className={buttonClassName} {...props}>
+        {children}
+      </Link>
+    );
+  }
+
   return (
-    <a
-      className={`inline-flex min-h-11 items-center justify-center rounded-lg px-5 py-3 text-sm font-semibold transition ${variants[variant]} ${className}`}
-      {...props}
-    >
+    <a href={href} className={buttonClassName} {...props}>
       {children}
     </a>
   );
 }
+

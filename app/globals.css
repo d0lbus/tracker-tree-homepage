@@ -1,4 +1,4 @@
-@import "tailwindcss";
+﻿@import "tailwindcss";
 
 :root {
   --tt-hero: #06130e;
@@ -83,3 +83,4 @@ a {
 .tt-soft-shadow {
   box-shadow: 0 16px 40px rgba(23, 33, 27, 0.08);
 }
+

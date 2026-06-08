@@ -1,4 +1,4 @@
-const faqs = [
+﻿const faqs = [
   {
     question: "What makes TrackerTree different from a to-do list?",
     answer:
@@ -62,3 +62,4 @@ export function FAQSection() {
     </section>
   );
 }
+

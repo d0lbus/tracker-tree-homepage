@@ -1,36 +1,146 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# TrackerTree Landing Page
 
-## Getting Started
+Marketing landing page for TrackerTree.
 
-First, run the development server:
+TrackerTree is a personal progress dashboard for projects, routines, subtasks, goal-related spending, streaks, and focus recovery.
 
-```bash
+## Main URLs
+
+```txt
+Marketing site:
+https://trackertree.com
+
+App:
+https://app.trackertree.com
+Pages
+/
+ /pricing
+ /privacy
+ /terms
+Tech Stack
+Next.js
+TypeScript
+Tailwind CSS
+Lucide React
+Vercel
+Getting Started
+
+Install dependencies:
+
+npm install
+
+Run locally:
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+http://localhost:3000
+Build Check
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Run:
 
-## Learn More
+npm run build
 
-To learn more about Next.js, take a look at the following resources:
+Run lint:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+npm run lint
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Run TypeScript check:
 
-## Deploy on Vercel
+npx tsc --noEmit
+Important Files
+app/page.tsx
+app/pricing/page.tsx
+app/privacy/page.tsx
+app/terms/page.tsx
+app/layout.tsx
+app/globals.css
+app/sitemap.ts
+app/robots.ts
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+components/landing/
+lib/site.ts
+Site Config
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Update global site settings here:
+
+lib/site.ts
+
+Current important values:
+
+export const siteConfig = {
+  name: "TrackerTree",
+  url: "https://trackertree.com",
+  appUrl: "https://app.trackertree.com",
+  loginUrl: "https://app.trackertree.com/login",
+  supportEmail: "support@trackertree.com",
+};
+Deployment Plan
+
+Recommended domain setup:
+
+trackertree.com      -> marketing landing page
+www.trackertree.com  -> redirect to trackertree.com
+app.trackertree.com  -> actual TrackerTree app
+Vercel Deployment
+
+Install Vercel CLI if needed:
+
+npm install -g vercel
+
+Login:
+
+vercel login
+
+Deploy preview:
+
+vercel
+
+Deploy production:
+
+vercel --prod
+Cloudflare DNS Notes
+
+Use Vercel's exact DNS values from the Vercel domain settings.
+
+Expected records:
+
+trackertree.com      -> Vercel marketing project
+www.trackertree.com  -> Vercel marketing project
+app.trackertree.com  -> Vercel app project
+Cloudflare SSL Settings
+
+Recommended after Vercel SSL is active:
+
+SSL/TLS mode: Full (strict)
+Always Use HTTPS: On
+Automatic HTTPS Rewrites: On
+Supabase Auth Notes
+
+For the app project, configure Supabase Auth:
+
+Site URL:
+https://app.trackertree.com
+
+Redirect URLs:
+https://app.trackertree.com/**
+https://trackertree.com/**
+http://localhost:3000/**
+
+Only keep trackertree.com in redirect URLs if the marketing site needs auth redirects.
+
+Google OAuth Notes
+
+In Google Cloud Console OAuth branding:
+
+App name: TrackerTree
+Authorized domain: trackertree.com
+
+Authorized JavaScript origins:
+
+https://app.trackertree.com
+https://trackertree.com
+
+Use the Supabase OAuth callback URL shown in Supabase Auth provider settings.
+

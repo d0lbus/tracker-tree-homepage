@@ -1,4 +1,4 @@
-import { BarChart3, CheckCircle2, CircleDollarSign, Repeat2 } from "lucide-react";
+﻿import { BarChart3, CheckCircle2, CircleDollarSign, Repeat2 } from "lucide-react";
 
 const features = [
   {
@@ -57,3 +57,4 @@ export function ProductPromiseSection() {
     </section>
   );
 }
+

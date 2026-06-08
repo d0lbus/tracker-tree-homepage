@@ -1,7 +1,7 @@
-const panels = [
+ï»¿const panels = [
   {
     tab: "Dashboard",
-    title: "Today’s work, active projects, and the focus you can return to.",
+    title: "Todayâ€™s work, active projects, and the focus you can return to.",
     points: ["Resume card", "Today tasks", "Progress cards"],
   },
   {
@@ -30,7 +30,7 @@ export function ProductShowcaseSection() {
             Everything important stays visible.
           </h2>
           <p className="mt-5 text-lg leading-8 text-[var(--tt-muted)]">
-            Your dashboard shows today’s work, active projects, routine
+            Your dashboard shows todayâ€™s work, active projects, routine
             progress, goal costs, and the focus you can return to.
           </p>
         </div>
@@ -66,3 +66,4 @@ export function ProductShowcaseSection() {
     </section>
   );
 }
+

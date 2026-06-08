@@ -1,4 +1,4 @@
-import {
+﻿import {
   BarChart3,
   CircleDollarSign,
   GitBranch,
@@ -74,3 +74,4 @@ export function FeatureGridSection() {
     </section>
   );
 }
+

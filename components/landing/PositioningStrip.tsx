@@ -1,4 +1,4 @@
-const pills = [
+﻿const pills = [
   "Projects",
   "Routines",
   "Subtasks",
@@ -31,3 +31,4 @@ export function PositioningStrip() {
     </section>
   );
 }
+

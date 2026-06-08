@@ -1,5 +1,4 @@
-import type { Metadata } from "next";
-import { FAQSection } from "@/components/landing/FAQSection";
+﻿import type { Metadata } from "next";
 import { FinalCTASection } from "@/components/landing/FinalCTASection";
 import { LandingFooter } from "@/components/landing/LandingFooter";
 import { LandingNavbar } from "@/components/landing/LandingNavbar";
@@ -86,3 +85,5 @@ export default function PricingPage() {
     </>
   );
 }
+
+

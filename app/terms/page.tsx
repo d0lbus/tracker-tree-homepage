@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+Ôªøimport type { Metadata } from "next";
 import { LegalPageShell } from "@/components/landing/LegalPageShell";
 import { siteConfig } from "@/lib/site";
 
@@ -59,7 +59,7 @@ export default function TermsPage() {
           body: (
             <p>
               You agree not to misuse TrackerTree, attempt to access another
-              userís data, interfere with the service, upload harmful code, or
+              user‚Äôs data, interfere with the service, upload harmful code, or
               use the service for unlawful activity.
             </p>
           ),
@@ -138,7 +138,7 @@ export default function TermsPage() {
           body: (
             <p>
               We may update these Terms and Conditions from time to time. When
-              we make changes, we will update the ìLast updatedî date on this
+              we make changes, we will update the ‚ÄúLast updated‚Äù date on this
               page.
             </p>
           ),
@@ -162,3 +162,4 @@ export default function TermsPage() {
     />
   );
 }
+

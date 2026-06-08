@@ -1,4 +1,4 @@
-import { FAQSection } from "@/components/landing/FAQSection";
+﻿import { FAQSection } from "@/components/landing/FAQSection";
 import { FeatureGridSection } from "@/components/landing/FeatureGridSection";
 import { FinalCTASection } from "@/components/landing/FinalCTASection";
 import { FocusRecoverySection } from "@/components/landing/FocusRecoverySection";
@@ -35,3 +35,4 @@ export default function Home() {
     </>
   );
 }
+

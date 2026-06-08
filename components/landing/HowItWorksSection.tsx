@@ -1,4 +1,4 @@
-const steps = [
+﻿const steps = [
   {
     title: "Create a goal",
     copy: "Add a project, routine, or one-time task.",
@@ -47,3 +47,4 @@ export function HowItWorksSection() {
     </section>
   );
 }
+

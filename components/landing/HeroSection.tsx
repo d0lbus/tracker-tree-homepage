@@ -1,4 +1,4 @@
-import { ArrowRight } from "lucide-react";
+﻿import { ArrowRight } from "lucide-react";
 import { siteConfig } from "@/lib/site";
 import { LandingButton } from "./LandingButton";
 import { ProductMockup } from "./ProductMockup";
@@ -45,3 +45,4 @@ export function HeroSection() {
     </section>
   );
 }
+

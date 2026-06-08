@@ -1,4 +1,4 @@
-export const siteConfig = {
+﻿export const siteConfig = {
   name: "TrackerTree",
   url: "https://trackertree.com",
   appUrl: "https://app.trackertree.com",
@@ -14,3 +14,4 @@ export const navLinks = [
   { label: "Pricing", href: "/pricing" },
   { label: "FAQ", href: "/#faq" },
 ];
+

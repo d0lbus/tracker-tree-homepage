@@ -1,4 +1,4 @@
-const useCases = [
+﻿const useCases = [
   {
     title: "Student",
     copy: "Track school projects, study routines, deadlines, and printing costs.",
@@ -58,3 +58,4 @@ export function UseCasesSection() {
     </section>
   );
 }
+

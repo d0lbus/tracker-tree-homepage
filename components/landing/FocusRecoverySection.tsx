@@ -1,4 +1,4 @@
-import { PauseCircle, RotateCcw, ShieldCheck } from "lucide-react";
+﻿import { PauseCircle, RotateCcw, ShieldCheck } from "lucide-react";
 
 const cards = [
   {
@@ -66,3 +66,4 @@ export function FocusRecoverySection() {
     </section>
   );
 }
+

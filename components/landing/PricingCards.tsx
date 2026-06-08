@@ -1,4 +1,4 @@
-import { Check } from "lucide-react";
+﻿import { Check } from "lucide-react";
 import { siteConfig } from "@/lib/site";
 import { LandingButton } from "./LandingButton";
 
@@ -77,3 +77,4 @@ export function PricingCards() {
     </div>
   );
 }
+
