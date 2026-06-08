@@ -7,18 +7,22 @@ type LandingButtonProps = Omit<
 > & {
   href: string;
   children: ReactNode;
-  variant?: "primary" | "secondary" | "dark" | "light";
+  variant?: "hero" | "primary" | "secondary" | "dark" | "light" | "text";
 };
 
 const variants = {
+  hero:
+    "bg-[var(--tt-green-soft)] text-[var(--tt-super-indigo)] hover:bg-white border border-transparent",
   primary:
     "bg-[var(--tt-green)] text-white hover:bg-[var(--tt-green-hover)] border border-transparent",
   secondary:
     "bg-white/5 text-white hover:bg-white/10 border border-white/15",
   dark:
-    "bg-[var(--tt-text)] text-white hover:bg-[#26352b] border border-transparent",
+    "bg-[var(--tt-super-indigo)] text-white hover:bg-[var(--tt-super-indigo-deep)] border border-transparent",
   light:
-    "bg-white text-[var(--tt-final-green)] hover:bg-white/90 border border-transparent",
+    "bg-white text-[var(--tt-super-teal)] hover:bg-white/90 border border-transparent",
+  text:
+    "bg-transparent text-white/75 hover:text-white border border-transparent px-0",
 };
 
 function isInternalLink(href: string) {
@@ -32,7 +36,7 @@ export function LandingButton({
   className = "",
   ...props
 }: LandingButtonProps) {
-  const buttonClassName = `inline-flex min-h-11 items-center justify-center rounded-lg px-5 py-3 text-sm font-semibold transition ${variants[variant]} ${className}`;
+  const buttonClassName = `inline-flex min-h-11 items-center justify-center rounded-lg px-5 py-3 text-sm font-semibold leading-none transition ${variants[variant]} ${className}`;
 
   if (isInternalLink(href)) {
     return (
@@ -48,4 +52,3 @@ export function LandingButton({
     </a>
   );
 }
-

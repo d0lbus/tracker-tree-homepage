@@ -1,17 +1,14 @@
 ﻿import { FAQSection } from "@/components/landing/FAQSection";
-import { FeatureGridSection } from "@/components/landing/FeatureGridSection";
 import { FinalCTASection } from "@/components/landing/FinalCTASection";
 import { FocusRecoverySection } from "@/components/landing/FocusRecoverySection";
 import { HeroSection } from "@/components/landing/HeroSection";
-import { HowItWorksSection } from "@/components/landing/HowItWorksSection";
 import { LandingFooter } from "@/components/landing/LandingFooter";
 import { LandingNavbar } from "@/components/landing/LandingNavbar";
-import { PositioningStrip } from "@/components/landing/PositioningStrip";
+import { PersonalProgressLoopSection } from "@/components/landing/PersonalProgressLoopSection";
 import { PricingPreviewSection } from "@/components/landing/PricingPreviewSection";
-import { ProblemSection } from "@/components/landing/ProblemSection";
-import { ProductPromiseSection } from "@/components/landing/ProductPromiseSection";
-import { ProductShowcaseSection } from "@/components/landing/ProductShowcaseSection";
+import { ScatteredSystemSection } from "@/components/landing/ScatteredSystemSection";
 import { UseCasesSection } from "@/components/landing/UseCasesSection";
+import { WhyDifferentSection } from "@/components/landing/WhyDifferentSection";
 
 export default function Home() {
   return (
@@ -19,13 +16,10 @@ export default function Home() {
       <LandingNavbar />
       <main>
         <HeroSection />
-        <PositioningStrip />
-        <ProblemSection />
-        <ProductPromiseSection />
+        <ScatteredSystemSection />
+        <PersonalProgressLoopSection />
         <FocusRecoverySection />
-        <ProductShowcaseSection />
-        <FeatureGridSection />
-        <HowItWorksSection />
+        <WhyDifferentSection />
         <UseCasesSection />
         <PricingPreviewSection />
         <FAQSection />
@@ -35,4 +29,3 @@ export default function Home() {
     </>
   );
 }
-
